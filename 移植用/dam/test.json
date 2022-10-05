@@ -1,0 +1,24 @@
+{
+    "strs":[
+        {
+            "id":1,
+            "name":"Excel"
+        },
+        {
+            "id":2,
+            "name":"Word"
+        },
+        {
+            "id":3,
+            "name":"PowerPoint"
+        },
+        {
+            "id":4,
+            "name":"Access"
+        },
+        {
+            "id":5,
+            "name":"Outlook"
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイマー</title>
+</head>
+<body>
+    <script>
+        var t_1,t_2;
+
+        function calc_Second(t){
+            return t%60;
+        }
+
+        function calc_Minute(t){
+            return (t-calc_Second(t))/60;
+        }
+
+        function judge(t){
+            if(t<10){
+                return "0"+t;
+            }else{
+                return t+"";
+            }
+        }
+
+        function time_Format(m,s){
+            return judge(m)+":"+judge(s);
+        }
+
+        function start_Timer(){
+            if(t_1<=0){
+                clearInterval();
+            }else{
+                var frm_txt=time_Format(calc_Minute(t_1),calc_Second(t_1));
+                document.getElementById("znr").innerHTML=frm_txt;
+                t_1--;
+            }
+        }
+
+        function stop_Timer(){
+            t_1=-1;
+            window.alert("タイマーを中止しました。");
+            location.reload(true);
+        }
+
+        function end_Timer(){
+            window.alert(t_2+"分が経過しました。\nタイマーを終了します。");
+            location.reload(true);
+        }
+
+        function test(){
+            t_1=window.prompt("時間（分）を指定してください",60);
+            t_2=t_1;
+            t_1*=60;
+            setInterval('start_Timer()',1000);
+            
+            if(t_1!=-1){
+                setTimeout('end_Timer()', Number(t_2)*60000+1000);
+            }
+        }
+    </script>
+    <button onclick="test()">タイマー開始</button>
+    <button onclick="stop_Timer()">タイマー停止</button>
+    <h1 id="znr"></h1>
+</body>
+</html>

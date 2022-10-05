@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="znr">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+    </table>
+    <button onclick="spl()">push me!</button>
+    <script>
+        function spl(){
+            var testjson={
+                "strs":[
+                    {
+                        "id":1,
+                    "name":"Excel"
+                    },
+                    {
+                        "id":2,
+                    "name":"Word"
+                    },
+                    {
+                        "id":3,
+                    "name":"PowerPoint"
+                    },
+                    {
+                        "id":4,
+                    "name":"Access"
+                    },
+                    {
+                        "id":5,
+                    "name":"Outlook"
+                    }
+                ]
+            };
+            alert(testjson.strs[3].name);
+        }
+    </script>
+</body>
+</html>
