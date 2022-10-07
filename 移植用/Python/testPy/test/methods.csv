@@ -1,0 +1,13 @@
+String.prototype.anchor(),"<a name=""name""> (ハイパーテキストのターゲット)"
+String.prototype.big(),<big>
+String.prototype.blink(),<blink>
+String.prototype.bold(),<b>
+String.prototype.fixed(),<tt>
+String.prototype.fontcolor(),"<font color=""color"">"
+String.prototype.fontsize(),"<font size=""size"">"
+String.prototype.italics(),<i>
+String.prototype.link(),"<a href=""url""> (URL へのリンク)"
+String.prototype.small(),<small>
+String.prototype.strike(),<strike>
+String.prototype.sub(),<sub>
+String.prototype.sup(),<sup>
